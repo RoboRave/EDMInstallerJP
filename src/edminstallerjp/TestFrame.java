@@ -38,9 +38,7 @@ import org.netbeans.lib.awtextra.AbsoluteLayout;
  */
 public class TestFrame extends java.awt.Frame {
 
-    /**
-     * Creates new form TestFrame
-     */
+    
     public String InstallLocation="null";
     public String RunLocation = System.getProperty("user.dir");
     public File Source = new File(RunLocation + "/EDM.jar");
@@ -75,24 +73,30 @@ public class TestFrame extends java.awt.Frame {
         FinderDialog.setName("Finder"); // NOI18N
         FinderDialog.setPreferredSize(new Dimension(500, 320));
 
+        setPreferredSize(new Dimension(320, 145));
+        setSize(new Dimension(320, 145));
         addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent evt) {
                 exitForm(evt);
             }
         });
+        setLayout(new AbsoluteLayout());
 
         InstallButton.setFont(new Font("Microsoft Sans Serif", 0, 12)); // NOI18N
         InstallButton.setActionCommand("InstallButton");
         InstallButton.setContentAreaFilled(false);
         InstallButton.setFocusPainted(false);
         InstallButton.setLabel("Install");
+        InstallButton.setMaximumSize(new Dimension(75, 20));
+        InstallButton.setMinimumSize(new Dimension(75, 20));
         InstallButton.setName("InstallButton"); // NOI18N
-        InstallButton.setPreferredSize(new Dimension(75, 20));
+        InstallButton.setPreferredSize(new Dimension(0, 0));
         InstallButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 InstallButtonActionPerformed(evt);
             }
         });
+        add(InstallButton, new AbsoluteConstraints(20, 100, 75, 20));
 
         EDMCheck.setBackground(Color.white);
         EDMCheck.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
@@ -106,6 +110,7 @@ public class TestFrame extends java.awt.Frame {
                 EDMCheckItemStateChanged(evt);
             }
         });
+        add(EDMCheck, new AbsoluteConstraints(20, 70, 220, 20));
 
         Finder.setActionCommand("FinderButton");
         Finder.setLabel("...");
@@ -117,6 +122,7 @@ public class TestFrame extends java.awt.Frame {
                 FinderActionPerformed(evt);
             }
         });
+        add(Finder, new AbsoluteConstraints(270, 25, 25, 20));
 
         InstallPath.setCursor(new Cursor(Cursor.TEXT_CURSOR));
         InstallPath.setEditable(false);
@@ -125,6 +131,7 @@ public class TestFrame extends java.awt.Frame {
         InstallPath.setName("InstallPath"); // NOI18N
         InstallPath.setPreferredSize(new Dimension(0, 0));
         InstallPath.setText("Find Path");
+        add(InstallPath, new AbsoluteConstraints(20, 25, 240, 20));
 
         ForgeCheck.setFont(new Font("Microsoft Sans Serif", 0, 12)); // NOI18N
         ForgeCheck.setLabel("MinecraftForge Version 1291");
@@ -136,35 +143,7 @@ public class TestFrame extends java.awt.Frame {
                 ForgeCheckItemStateChanged(evt);
             }
         });
-
-        GroupLayout layout = new GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addGroup(GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(InstallPath, GroupLayout.PREFERRED_SIZE, 240, GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(Finder, GroupLayout.PREFERRED_SIZE, 25, GroupLayout.PREFERRED_SIZE))
-                    .addComponent(ForgeCheck, GroupLayout.PREFERRED_SIZE, 180, GroupLayout.PREFERRED_SIZE)
-                    .addComponent(EDMCheck, GroupLayout.PREFERRED_SIZE, 220, GroupLayout.PREFERRED_SIZE)
-                    .addComponent(InstallButton, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-                .addGap(25, 25, 25))
-        );
-        layout.setVerticalGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addGroup(GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                    .addComponent(InstallPath, GroupLayout.PREFERRED_SIZE, 20, GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Finder, GroupLayout.PREFERRED_SIZE, 20, GroupLayout.PREFERRED_SIZE))
-                .addComponent(ForgeCheck, GroupLayout.PREFERRED_SIZE, 20, GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(EDMCheck, GroupLayout.PREFERRED_SIZE, 20, GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(InstallButton, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25))
-        );
+        add(ForgeCheck, new AbsoluteConstraints(20, 50, 180, 20));
 
         pack();
     }//GEN-END:initComponents
@@ -194,7 +173,7 @@ public class TestFrame extends java.awt.Frame {
                 try {
                     Files.move(SourcePath,OutputPath ,REPLACE_EXISTING);
                 } catch (IOException ex) {
-                    Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(TestFrame.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
             else
@@ -215,7 +194,7 @@ public class TestFrame extends java.awt.Frame {
                     proc.start();
                     //System.Process.Start(System.getProperty("user.dir") + "/forge.exe");
                 } catch (IOException ex) {
-                    Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(TestFrame.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
         }
@@ -233,7 +212,7 @@ public class TestFrame extends java.awt.Frame {
             try {
                 Json.instance.run();
             } catch (Exception ex) {
-                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(TestFrame.class.getName()).log(Level.SEVERE, null, ex);
             }
         }else{
             Json.es.setvalue("false");
@@ -241,7 +220,7 @@ public class TestFrame extends java.awt.Frame {
             try {
                 Json.instance.run();
             } catch (Exception ex) {
-                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(TestFrame.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
     }//GEN-LAST:event_EDMCheckItemStateChanged
