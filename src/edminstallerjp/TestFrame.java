@@ -74,6 +74,7 @@ public class TestFrame extends java.awt.Frame {
         FinderDialog.setPreferredSize(new Dimension(500, 320));
 
         setPreferredSize(new Dimension(320, 145));
+        setResizable(false);
         setSize(new Dimension(320, 145));
         addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent evt) {
@@ -122,7 +123,7 @@ public class TestFrame extends java.awt.Frame {
                 FinderActionPerformed(evt);
             }
         });
-        add(Finder, new AbsoluteConstraints(270, 25, 25, 20));
+        add(Finder, new AbsoluteConstraints(270, 30, 25, 20));
 
         InstallPath.setCursor(new Cursor(Cursor.TEXT_CURSOR));
         InstallPath.setEditable(false);
@@ -131,7 +132,7 @@ public class TestFrame extends java.awt.Frame {
         InstallPath.setName("InstallPath"); // NOI18N
         InstallPath.setPreferredSize(new Dimension(0, 0));
         InstallPath.setText("Find Path");
-        add(InstallPath, new AbsoluteConstraints(20, 25, 240, 20));
+        add(InstallPath, new AbsoluteConstraints(20, 30, 240, 20));
 
         ForgeCheck.setFont(new Font("Microsoft Sans Serif", 0, 12)); // NOI18N
         ForgeCheck.setLabel("MinecraftForge Version 1291");
@@ -144,8 +145,6 @@ public class TestFrame extends java.awt.Frame {
             }
         });
         add(ForgeCheck, new AbsoluteConstraints(20, 50, 180, 20));
-
-        pack();
     }//GEN-END:initComponents
 
     /**
