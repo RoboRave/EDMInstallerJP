@@ -4,6 +4,7 @@ install:
 - chmod +x gradle
 deploy:
   provider: releases
+  api_key: "027257ffd2b89ed1a77781b58f5d06181183e248"
   file: 
   - build/libs/EDM-${TRAVIS_BUILD_NUMBER}.jar
   skip_cleanup: true
