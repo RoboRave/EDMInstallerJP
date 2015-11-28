@@ -25,8 +25,10 @@ import java.nio.file.Path;
 import static java.nio.file.StandardCopyOption.REPLACE_EXISTING;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.GroupLayout;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JFileChooser;
 import javax.swing.LayoutStyle;
 import org.netbeans.lib.awtextra.AbsoluteConstraints;
@@ -73,9 +75,10 @@ public class TestFrame extends java.awt.Frame {
         FinderDialog.setName("Finder"); // NOI18N
         FinderDialog.setPreferredSize(new Dimension(500, 320));
 
-        setPreferredSize(new Dimension(320, 145));
+        setMinimumSize(new Dimension(300, 160));
+        setPreferredSize(new Dimension(300, 160));
         setResizable(false);
-        setSize(new Dimension(320, 145));
+        setSize(new Dimension(320, 160));
         addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent evt) {
                 exitForm(evt);
@@ -97,7 +100,7 @@ public class TestFrame extends java.awt.Frame {
                 InstallButtonActionPerformed(evt);
             }
         });
-        add(InstallButton, new AbsoluteConstraints(20, 100, 75, 20));
+        add(InstallButton, new AbsoluteConstraints(20, 130, 75, 20));
 
         EDMCheck.setBackground(Color.white);
         EDMCheck.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
@@ -111,7 +114,7 @@ public class TestFrame extends java.awt.Frame {
                 EDMCheckItemStateChanged(evt);
             }
         });
-        add(EDMCheck, new AbsoluteConstraints(20, 70, 220, 20));
+        add(EDMCheck, new AbsoluteConstraints(20, 100, 220, 20));
 
         Finder.setActionCommand("FinderButton");
         Finder.setLabel("...");
@@ -123,7 +126,7 @@ public class TestFrame extends java.awt.Frame {
                 FinderActionPerformed(evt);
             }
         });
-        add(Finder, new AbsoluteConstraints(270, 30, 25, 20));
+        add(Finder, new AbsoluteConstraints(260, 60, 25, 20));
 
         InstallPath.setCursor(new Cursor(Cursor.TEXT_CURSOR));
         InstallPath.setEditable(false);
@@ -132,7 +135,7 @@ public class TestFrame extends java.awt.Frame {
         InstallPath.setName("InstallPath"); // NOI18N
         InstallPath.setPreferredSize(new Dimension(0, 0));
         InstallPath.setText("Find Path");
-        add(InstallPath, new AbsoluteConstraints(20, 30, 240, 20));
+        add(InstallPath, new AbsoluteConstraints(20, 60, 230, 20));
 
         ForgeCheck.setFont(new Font("Microsoft Sans Serif", 0, 12)); // NOI18N
         ForgeCheck.setLabel("MinecraftForge Version 1291");
@@ -144,7 +147,7 @@ public class TestFrame extends java.awt.Frame {
                 ForgeCheckItemStateChanged(evt);
             }
         });
-        add(ForgeCheck, new AbsoluteConstraints(20, 50, 180, 20));
+        add(ForgeCheck, new AbsoluteConstraints(20, 80, 180, 20));
     }//GEN-END:initComponents
 
     /**

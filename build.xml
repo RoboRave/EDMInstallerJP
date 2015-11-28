@@ -10,6 +10,20 @@
 <project name="EDMInstallerJP" default="default" basedir=".">
     <description>Builds, tests, and runs the project EDMInstallerJP.</description>
     <import file="nbproject/build-impl.xml"/>
+	
+	 <taskdef name="bundleapp"
+             classname="com.oracle.appbundler.AppBundlerTask"   
+             classpath="lib/appbundler-1.0.jar" />
+
+    <target name="bundle-EDMInstallerJP">
+        <bundleapp outputdirectory="dist"
+            name="EDMInstallerJP"
+            displayname="EDMInstallerJP"
+            identifier="edminstallerjp.EDMInstallerJP"
+            mainclassname="edminstallerjp.EDMInstallerJP">
+            <classpath file="dist/EDMInstallerJP.jar" />
+        </bundleapp>
+    </target>
     <!--
 
     There exist several targets which are by default empty and which can be 
