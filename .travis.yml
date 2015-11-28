@@ -1,6 +1,12 @@
 language: java
-script: ant bundle-EDMInstallerJP
+script: gradle build
+install:
+- chmod +x gradle
 deploy:
   provider: releases
   file: 
-   - build/libs/EDMInstaller-${TRAVIS_BUILD_NUMBER}.jar
+  - build/libs/EDM-${TRAVIS_BUILD_NUMBER}.jar
+  skip_cleanup: true
+  on:
+   tags: true
+   all_branches: true
