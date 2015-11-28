@@ -1,4 +1,6 @@
 language: java
-script: 
-- ant build jar
-- ant bundle-EDMInstallerJP
+script: ant bundle-EDMInstallerJP
+deploy:
+  provider: releases
+  file: 
+   - build/libs/EDMInstaller-${TRAVIS_BUILD_NUMBER}.jar

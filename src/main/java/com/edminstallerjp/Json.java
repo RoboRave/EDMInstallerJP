@@ -1,7 +1,5 @@
-package edminstallerjp;
+package com.edminstallerjp;
 
-import edminstallerjp.Config;
-import edminstallerjp.EDMI;
 import com.google.gson.Gson;
 import java.io.FileWriter;
 import java.io.IOException;

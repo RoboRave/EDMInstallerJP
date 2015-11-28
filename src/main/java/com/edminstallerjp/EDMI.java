@@ -1,4 +1,4 @@
-package edminstallerjp;
+package com.edminstallerjp;
 
 public class EDMI   
 {

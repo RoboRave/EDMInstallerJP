@@ -1,9 +1,10 @@
-package edminstallerjp;
+package com.edminstallerjp;
 
 
-public class Config   
-{
+public class Config {
     private String name;
+    private String value;
+
     public String getname() {
         return name;
     }
@@ -12,7 +13,6 @@ public class Config
         name = value;
     }
 
-    private String value;
     public String getvalue() {
         return value;
     }
