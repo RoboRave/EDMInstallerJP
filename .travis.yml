@@ -9,5 +9,4 @@ deploy:
   - build/libs/EDM-${TRAVIS_BUILD_NUMBER}.jar
   skip_cleanup: true
   on:
-   tags: true
    all_branches: true
