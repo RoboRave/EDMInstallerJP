@@ -4,9 +4,9 @@ install:
 - chmod +x gradle
 deploy:
   provider: releases
-  api_key: "027257ffd2b89ed1a77781b58f5d06181183e248"
-  file: 
-  - build/libs/EDM-${TRAVIS_BUILD_NUMBER}.jar
+  api_key:fovbEeoQFUrj0+VsiyQ3mAmG045LcU4rr3Eu8u83RF21DYAVOXeIp3PARO+IhFxgsLEf+KdnvfvK6809P3/nD0xJcVkRlg40xyjpbP4N7Q42Hv9hoUZjsnmkATB/49P/7JGfCdpZn5MiN2kWMRjtJ8ussspwGH8mr1Vjw98c6fYSrg3WIlIW4a2XqZGmrLBvxFy8UEx7EfA8x/LkiwbH6ft0htOEovHZepzmpyi5RXCaFaWqqyMZYutP7Qc/w0+BhNj8LZhi4tpqzlfduc6J/XQMV6QA0Ka+LLHNaA8qXy+37lfynwz/gg6sY4b+uDQXx7uS9BQDidiEW0lBPRFGciVDFNphJSrHc/abNJnTpsLoIciekNsYGUwUEUNHJ306DccYJh92PXY8eeRK4o1OiMdLMSsc7MXPZ1xiYipLiNvloHzEdm0kfKUlmPCTvT00fbCbvMXQuuOoy6Pr+WFJLrMeRhQCNjWrb6768xRcN615vHmvMztJWqlwcEz02Hy1WGi0926xgeB+l0bQoHuQgQdjHbNCPV4UZepZ8fdyWCWAV/Kk5KVULyW382ALlzCJx8ruKaQynnEJYDihpAmfustVtmcqjqtspu2n+fGrpa3ktPB+30188biySGSbvAC1/JPYBcwh+wyqc9Hoki8blw49SELODsEekyQRiL73XWc=
+  file: "build/libs/EDM.jar"
   skip_cleanup: true
   on:
-   all_branches: true
+    all_branches: true
+
