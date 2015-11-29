@@ -10,4 +10,5 @@ deploy:
   - build/libs/EDM.jar
   skip_cleanup: true
   on:
+    tags: true
     repo: RoboRave/EDMInstallerJP
