@@ -9,7 +9,6 @@ deploy:
   file:
   - build/libs/EDM-${TRAVIS_BUILD_NUMBER}.jar
   skip_cleanup: true
-  tag:"0.2"
   on:
     tags: true
     repo: RoboRave/EDMInstallerJP
