@@ -7,7 +7,7 @@ deploy:
   api_key:
    secure: IqG4jatfO4pK7sQap6S7zUNDJjlQy9LcZLUqbx2eWAR61awYf+/B9TdKQTtdd3sYO9AdMWSQnD7hkIzt8YWebd+R1eEvnuCi2/iy4pSytyMpAFuc7etck+mzU0U0AJ+YexOV/VsyOztd22O+nDj6hMKV0vBj0nGLW/0z0KZdwZ5O4+L+pa3hBqVWXFD/MMawEhyB6nJysZ00yjvcYYldRRcGCt8shAqdgLv0hDFeOvp/pyWaT50n1dnxraFeXiG2gpr0nroZala/0NzHb49m5BkJmQJvF/OYSX5Q3QGszDvz70oyIKoTguwYMB8qj2fHyu+zL0b6QrcZyL41kosRk1dvvD3mGGRNIp5Oxc6YgYlLVov1BtF9Hte/LiSkSDNzxGLeMp0f49jJLukdcwcxaTN5R46YuoUb5FlaaUVX9OVNMs43tZrN0w40f8YDUTrcJK0DLFIqJXlo4m3q43OzcQ/jHvfqtE9np8/csPVkEOt2/NOjKf6kz0KEcIPCvNq2QCBiF4/1TcGsTgWNobnfwSTOk9i5GbFLJ1r8S5UPxJv+AR84hdLPljGi6wE7LHhVixFL8fov+6szW/zGIAVMsfyybfLuQvNDnGMIIyLkIezrwszzz0jOsssgod5h+xyIYJsoZty2tQoFUoM+aTsBUxPPV9w3ayg0uhN7gaKZ17M=
   file:
-  - build/libs/EDM.jar
+  - build/libs/EDM-${TRAVIS_BUILD_NUMBER}.jar
   skip_cleanup: true
   tag:"0.2"
   on:
