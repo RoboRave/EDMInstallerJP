@@ -6,8 +6,6 @@ deploy:
   provider: releases
   user: RoboRave
   api_key: Key
-  password:
-    secure: B9dWPzUP92omITgdsEDj8bFP3R3xUD9ihJJqEWk3TLubStrFx4wsBNschOZHQt6SXgvZsA4oFz/qwoVOjXssZFzsHHDp8Wsp0bu9tlbNdsI7kWZ6RVj96LgtwGEv5NvoYBQKliQfur7zgYAbHZwTWrESIJiy1hNKwM7Bo2jPL6s9TmLjUAL9MpQri+4vXUaWfUcf6HxF12v9QDSs3/zFbbM637zOsB90AiKl9NFYMEI/AIgpRQAlU2p4KP/u6jIbvtnHmlSsA1QpM3m00xx47+8qgFJAXx9K4nw36xFFpcSaAdQDLq5mJD8n4NPVdKIgidutLDMYwFO6hVk6fU0nM7+gaeAASuncu6ZjaKox1YuzTFds2NXpNe4UJth/aQCwGsNli2H+0MvgxWx7pSlLLZFVO/B2VDgaGwZLmLUexBnpAJFXHKcSf+RcfPii1Fh8Pd23Ni0634FVPCsIhzQyy2xYNJs75rIPTq3e/iGIexwerOiGRkQznB10WtiKByIQI5L0kHSMg//TcE8SGjeYgPoLuNpTA3iqk5hp0ttCGtPPfpgESzgEnEdi0A+RigPKd/SVzkAIpMaDBPjnmDKnEB1YjStRWR/0MAhfq/O9oU7/8zC1mxAMPebdOvq5g+B2i0LzxCrj/sKNqXHd8aKB83qjGUVnLDZEBHCW7osXsWI=
   file:
   - build/libs/EDM.jar
   skip_cleanup: true
