@@ -1,6 +1,6 @@
-version = System.env.TRAVIS_BUILD_NUMBER
+rootProject.version = System.env.TRAVIS_BUILD_NUMBER
 group 'com.edminstallerjp'
-archivesBaseName='ModInstaller'
+rootProject.name='ModInstaller'
 apply plugin: 'java'
 
 repositories {
