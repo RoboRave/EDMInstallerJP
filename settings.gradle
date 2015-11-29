@@ -1,2 +1,0 @@
-version= System.env.TRAVIS_BUILD_NUMBER
-rootProject.name = 'EDM'+ version
