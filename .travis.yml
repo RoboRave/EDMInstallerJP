@@ -4,7 +4,6 @@ install:
 - chmod +x gradle
 deploy:
   provider: releases
-  user: RoboRave
   api_key: Key
   file:
   - build/libs/EDM.jar
