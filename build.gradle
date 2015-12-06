@@ -1,13 +1,25 @@
-rootProject.version = System.env.TRAVIS_BUILD_NUMBER
-group 'com.edminstallerjp'
 apply plugin: 'java'
+apply plugin: 'eclipse'
+
+version = System.env.TRAVIS_BUILD_NUMBER
+group= "com.edminstallerjp" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "EDM"
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.11'
-	 compile files('lib/AbsoluteLayout.jar')
-	 compile files('lib/gson-2.4.jar')
+    //testCompile group: 'junit', name: 'junit', version: '4.11'
+	compile files('lib/AbsoluteLayout.jar')
+	compile files('lib/gson-2.4.jar')
+}
+processResources
+{
+
+task devJar(type: Jar) {
+    from sourceSets.main.output
+    classifier = version+'-dev'
+}
+
 }
